@@ -75,8 +75,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">Call Us</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">Mon-Fri 9AM-6PM PST</p>
+                    <p className="text-gray-600">+91 98765 43210</p>
+                    <p className="text-gray-600">Mon-Fri 9AM-6PM IST</p>
                   </div>
                 </div>
 
@@ -86,8 +86,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">Visit Us</h3>
-                    <p className="text-gray-600">123 Beauty Street</p>
-                    <p className="text-gray-600">Cosmetic City, CC 12345</p>
+                    <p className="text-gray-600">B Block, Galgotias University</p>
+                    <p className="text-gray-600">Greater Noida, UP, India</p>
                   </div>
                 </div>
 
@@ -227,7 +227,7 @@ const Contact = () => {
             <div className="text-center">
               <MapPin className="w-12 h-12 text-gray-500 mx-auto mb-4" />
               <p className="text-gray-600">Interactive map coming soon</p>
-              <p className="text-sm text-gray-500 mt-2">123 Beauty Street, Cosmetic City, CC 12345</p>
+              <p className="text-sm text-gray-500 mt-2">B Block, Galgotias University, Greater Noida, UP, India</p>
             </div>
           </div>
         </div>
