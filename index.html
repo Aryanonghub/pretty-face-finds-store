@@ -1,20 +1,41 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pretty-face-finds-store</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>BeautyBloom - Premium Beauty Products</title>
+    <meta name="description" content="Discover your natural beauty with our premium collection of cosmetics and skincare products." />
+    <meta name="author" content="BeautyBloom" />
 
-    <meta property="og:title" content="pretty-face-finds-store" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="BeautyBloom - Premium Beauty Products" />
+    <meta property="og:description" content="Discover your natural beauty with our premium collection of cosmetics and skincare products." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:site" content="@beautybloom" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- GitHub Pages SPA redirect script -->
+    <script type="text/javascript">
+      // Redirect for GitHub Pages 404 handling of SPAs
+      (function() {
+        // Don't run this script on localhost or direct domain access
+        const isDev = window.location.hostname === 'localhost' || 
+                      window.location.hostname === '127.0.0.1';
+        
+        if (!isDev && window.location.protocol !== 'file:') {
+          const redirectSegments = sessionStorage.redirect;
+          delete sessionStorage.redirect;
+          
+          if (redirectSegments) {
+            // If we have a stored route, redirect to it
+            window.history.replaceState(null, null, redirectSegments);
+          }
+        }
+      })();
+    </script>
   </head>
 
   <body>

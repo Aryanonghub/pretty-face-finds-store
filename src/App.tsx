@@ -12,12 +12,30 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Get the repository name from the URL for GitHub Pages
+const getBasename = () => {
+  // Extract repo name from GitHub Pages URL pattern (username.github.io/repo-name)
+  const { pathname } = window.location;
+  // Check if we're on a GitHub Pages domain
+  const isGitHubPages = /github\.io/i.test(window.location.hostname);
+  
+  if (isGitHubPages) {
+    // Extract the repository name (first segment after the domain)
+    const segments = pathname.split('/');
+    if (segments.length > 1) {
+      return '/' + segments[1]; // Return the repo name with leading slash
+    }
+  }
+  
+  return '/'; // Default for local development or custom domains
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={getBasename()}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
