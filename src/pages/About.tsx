@@ -1,7 +1,8 @@
 
-import { Heart, Award, Users, Sparkles, ArrowRight } from 'lucide-react';
+import { Heart, Award, Users, Sparkles, ArrowRight, Smile, Code, Palette, Star, Zap, Coffee } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 
 const About = () => {
   const values = [
@@ -29,22 +30,40 @@ const About = () => {
 
   const team = [
     {
-      name: 'Sarah Johnson',
+      name: 'Saurav Raj',
       role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
-      description: 'Former makeup artist with 15+ years in the beauty industry.'
+      emoji: '😎',
+      description: 'Visionary leader with a passion for beauty innovation.'
     },
     {
-      name: 'Emma Chen',
-      role: 'Head of Product Development',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
-      description: 'Chemical engineer specializing in cosmetic formulation.'
+      name: 'Rakshit Sharma',
+      role: 'CTO',
+      emoji: '🧠',
+      description: 'Tech genius behind our digital beauty experience.'
     },
     {
-      name: 'Maria Rodriguez',
+      name: 'Riya Singh',
+      role: 'Marketing Director',
+      emoji: '✨',
+      description: 'Creative strategist driving our brand growth.'
+    },
+    {
+      name: 'Rohan Sahu',
+      role: 'Product Development',
+      emoji: '🔬',
+      description: 'Expert formulator creating our signature products.'
+    },
+    {
+      name: 'Sachin Bhati',
+      role: 'Operations Manager',
+      emoji: '📊',
+      description: 'Ensuring everything runs smoothly behind the scenes.'
+    },
+    {
+      name: 'Saurab Singh',
       role: 'Creative Director',
-      image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=300&h=300&fit=crop',
-      description: 'Award-winning designer with a passion for sustainable beauty.'
+      emoji: '🎨',
+      description: 'Artistic mind shaping our visual identity.'
     }
   ];
 
@@ -81,7 +100,7 @@ const About = () => {
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
                 BeautyBloom was born from a simple belief: everyone deserves to feel beautiful 
-                in their own skin. Our founder, Sarah Johnson, started this journey after years 
+                in their own skin. Our founder, Saurav Raj, started this journey after years 
                 as a professional makeup artist, witnessing how the right products could transform 
                 not just appearance, but confidence.
               </p>
@@ -161,16 +180,13 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {team.map((member, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className="text-center group bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="relative mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-48 h-48 rounded-full mx-auto object-cover shadow-lg group-hover:shadow-xl transition-shadow"
-                  />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-t from-pink-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <Avatar className="w-24 h-24 mx-auto bg-gradient-to-r from-pink-200 to-rose-200">
+                    <AvatarFallback className="text-4xl">{member.emoji}</AvatarFallback>
+                  </Avatar>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-1">{member.name}</h3>
                 <p className="text-pink-600 font-medium mb-3">{member.role}</p>
